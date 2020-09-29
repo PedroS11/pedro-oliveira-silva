@@ -1,4 +1,4 @@
-name: CI
+name: Deploy to Firebase
 
 on:
   push:
@@ -6,19 +6,28 @@ on:
     - master
 
 jobs:
-  firebase-deploy:
-
+  build:
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@master
+    - name: Checkout Repo
+      uses: actions/checkout@master
+    - name: Set node version
+      uses: actions/setup-node@master
       with:
         node-version: '10.x'
-    - run: npm install
-    - run: npm run build
-    - uses: w9jds/firebase-action@master
-      with:
-        args: deploy --only hosting
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+    - name: Install dependencies
+      run: npm install
+    - name: Build
+      run: npm run build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+      steps:
+      - name: Deploy
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
