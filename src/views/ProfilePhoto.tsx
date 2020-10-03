@@ -1,21 +1,36 @@
 import React from "react";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import photo from '../assets/images/profile.jpg';
+import {Typography} from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
-    img: {
+    root: {
+        position: 'relative',
+        backgroundImage: `url(${photo})`,
         width: '100%',
         height: '600px',
-        objectFit: 'cover',
-        objectPosition: '0px -90px'
-    }
+        backgroundSize: 'cover',
+        backgroundPosition: '-0px -0px',
+        color: 'white'
+    },
+    photoText: {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)'
+    },
 }));
 
 const ProfilePhoto = () => {
     const classes = useStyles();
     return (
-        <div>
-            <img className={classes.img} src={photo} alt="Profile"/>
+        <div className={classes.root}>
+            <Typography variant="h3" align="center" gutterBottom className={classes.photoText}>
+                Pedro Oliveira da Silva
+                <Typography variant="h6" align="center" gutterBottom>
+                    Master in Computer Science @ FEUP
+                </Typography>
+            </Typography>
         </div>
     );
 };
