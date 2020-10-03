@@ -1,26 +1,56 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Footer from "./views/Footer";
+import ProfilePhoto from "./views/ProfilePhoto";
+import {Grid} from "@material-ui/core";
+import Contacts from "./views/Contacts";
+import MyTimeline from "./views/MyTimeline";
+import Projects from "./views/Projects";
+import {makeStyles} from "@material-ui/core/styles";
+import waveLogo from "./assets/images/wave.png";
+
+const useStyles = makeStyles(() => ({
+    waveBackground: {
+        backgroundImage: `url(${waveLogo})`,
+        backgroundSize: 'cover'
+    },
+    footer: {
+        borderTop: '1px solid #CECECE',
+        paddingBottom: '5px'
+    }
+}));
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const classes = useStyles();
+    return (
+        <div>
+            {/* Profile photo */}
+            <Grid container direction="row" justify="center" alignItems="center">
+                <ProfilePhoto/>
+            </Grid>
+
+            {/* Timeline */}
+            <Grid container direction="row" justify="center">
+                <Grid item xs={8}>
+                    <MyTimeline/>
+                </Grid>
+            </Grid>
+
+            {/* Projects */}
+            <Grid container direction="row" justify="center" alignItems="center" className={classes.waveBackground}>
+                <Projects/>
+            </Grid>
+
+            {/* Contacts */}
+            <Grid container direction="row" justify="center" alignItems="center">
+                <Contacts/>
+            </Grid>
+
+            {/* Footer */}
+            <Grid container direction="row" justify="center" alignItems="center" className={classes.footer}>
+                <Footer/>
+            </Grid>
+        </div>
+    );
 }
 
 export default App;
