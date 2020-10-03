@@ -4,10 +4,10 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 
 const useStyles = makeStyles(() => ({
     img: {
-        width: '1920px',
+        width: '100%',
         height: '600px',
         objectFit: 'cover',
-        objectPosition: '0px -170px'
+        objectPosition: '0px -100px'
     }
 }));
 
