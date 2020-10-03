@@ -76,7 +76,7 @@ function MyTimeline() {
                                 </Typography>
                             </TimelineOppositeContent>
                             <TimelineSeparator>
-                                <img className={classes.img} src={e.logo}/>
+                                <img className={classes.img} src={e.logo} alt="Company logo"/>
                                 <TimelineConnector/>
                             </TimelineSeparator>
                             <TimelineContent>
