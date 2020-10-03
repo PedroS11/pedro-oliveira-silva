@@ -8,7 +8,7 @@ export default () => {
     return (
         <Typography variant="subtitle1" align="center">
             {'Copyright © '}
-            <Link href="https://github.com/PedroS11">Pedro Silva</Link>
+            <Link target="_blank" rel="noopener noreferrer" href="https://github.com/PedroS11">Pedro Silva</Link>
             {' '}{new Date().getFullYear()}
         </Typography>
     );
