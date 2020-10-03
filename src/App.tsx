@@ -1,28 +1,40 @@
 import React from 'react';
 import Footer from "./views/Footer";
 import ProfilePhoto from "./views/ProfilePhoto";
-import {Grid, Link, Typography} from "@material-ui/core";
+import {Grid} from "@material-ui/core";
 import Contacts from "./views/Contacts";
+import MyTimeline from "./views/MyTimeline";
 
 function App() {
     return (
-        <Grid container direction="column" justify="center" alignItems="center">
-            <Grid item xs={12}>
+        <div>
+            {/* Profile photo */}
+            <Grid container direction="row" justify="center" alignItems="center">
                 <ProfilePhoto/>
             </Grid>
-            <Grid item xs={12}>
-                <h1>Experience</h1>
+
+            {/* Timeline */}
+            <Grid container direction="row" justify="center">
+                <Grid item xs={8}>
+                    <MyTimeline/>
+                </Grid>
             </Grid>
-            <Grid item xs={12}>
+
+            <Grid container direction="row" justify="center" alignItems="center">
+                {/* Projects */}
                 <h1>Projects</h1>
             </Grid>
-            <Grid item xs={12}>
+
+            {/* Contacts */}
+            <Grid container direction="row" justify="center" alignItems="center">
                 <Contacts/>
             </Grid>
-            <Grid item xs={12}>
+
+            {/* Footer */}
+            <Grid container direction="row" justify="center" alignItems="center">
                 <Footer/>
             </Grid>
-        </Grid>
+        </div>
     );
 }
 
