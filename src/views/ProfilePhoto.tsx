@@ -8,9 +8,9 @@ const useStyles = makeStyles(() => ({
         position: 'relative',
         backgroundImage: `url(${photo})`,
         width: '100%',
-        height: '600px',
+        height: '450px',
         backgroundSize: 'cover',
-        backgroundPosition: '-0px -0px',
+        backgroundPosition: '-0px -50px',
         color: 'white'
     },
     photoText: {
