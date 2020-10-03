@@ -15,7 +15,7 @@ function ProfilePhoto() {
     const classes = useStyles();
     return (
         <div>
-            <img className={classes.img} src={photo}/>
+            <img className={classes.img} src={photo} alt="Profile"/>
         </div>
     );
 }
