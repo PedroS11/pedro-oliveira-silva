@@ -36,7 +36,7 @@ export default () => {
                             <MailIcon/>
                         </Avatar>
                     </ListItemAvatar>
-                    <ListItemText primary="pedrosilva1137@gmail.com"/>
+                    <ListItemText primary={<Link href="mailto:pedrosilva1137@gmail.com">Email me</Link>}/>
                 </ListItem>
 
                 <ListItem>

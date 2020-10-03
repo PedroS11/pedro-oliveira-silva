@@ -11,6 +11,12 @@ function App() {
                 <ProfilePhoto/>
             </Grid>
             <Grid item xs={12}>
+                <h1>Experience</h1>
+            </Grid>
+            <Grid item xs={12}>
+                <h1>Projects</h1>
+            </Grid>
+            <Grid item xs={12}>
                 <Contacts/>
             </Grid>
             <Grid item xs={12}>
