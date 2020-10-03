@@ -4,8 +4,23 @@ import ProfilePhoto from "./views/ProfilePhoto";
 import {Grid} from "@material-ui/core";
 import Contacts from "./views/Contacts";
 import MyTimeline from "./views/MyTimeline";
+import Projects from "./views/Projects";
+import {makeStyles} from "@material-ui/core/styles";
+import waveLogo from "./assets/images/wave.png";
+
+const useStyles = makeStyles(() => ({
+    waveBackground: {
+        backgroundImage: `url(${waveLogo})`,
+        backgroundSize: 'cover'
+    },
+    footer: {
+        borderTop: '1px solid #CECECE',
+        paddingBottom: '5px'
+    }
+}));
 
 function App() {
+    const classes = useStyles();
     return (
         <div>
             {/* Profile photo */}
@@ -20,9 +35,9 @@ function App() {
                 </Grid>
             </Grid>
 
-            <Grid container direction="row" justify="center" alignItems="center">
-                {/* Projects */}
-                <h1>Projects</h1>
+            {/* Projects */}
+            <Grid container direction="row" justify="center" alignItems="center" className={classes.waveBackground}>
+                <Projects/>
             </Grid>
 
             {/* Contacts */}
@@ -31,7 +46,7 @@ function App() {
             </Grid>
 
             {/* Footer */}
-            <Grid container direction="row" justify="center" alignItems="center">
+            <Grid container direction="row" justify="center" alignItems="center" className={classes.footer}>
                 <Footer/>
             </Grid>
         </div>
