@@ -14,7 +14,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
-export default () => {
+const Contacts = () => {
     return (
         <div>
             <Typography variant="h3" align="center" gutterBottom>
@@ -45,7 +45,8 @@ export default () => {
                             <GitHubIcon/>
                         </Avatar>
                     </ListItemAvatar>
-                    <ListItemText primary={<Link target="_blank" rel="noopener noreferrer" href="https://github.com/PedroS11">/PedroS11</Link>}/>
+                    <ListItemText primary={<Link target="_blank" rel="noopener noreferrer"
+                                                 href="https://github.com/PedroS11">/PedroS11</Link>}/>
                 </ListItem>
 
                 <ListItem>
@@ -54,7 +55,8 @@ export default () => {
                             <LinkedInIcon/>
                         </Avatar>
                     </ListItemAvatar>
-                    <ListItemText primary={<Link target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/pedro-oliveira-silva">/in/pedro-oliveira-silva</Link>}/>
+                    <ListItemText primary={<Link target="_blank" rel="noopener noreferrer"
+                                                 href="https://www.linkedin.com/in/pedro-oliveira-silva">/in/pedro-oliveira-silva</Link>}/>
                 </ListItem>
 
                 <ListItem>
@@ -72,9 +74,12 @@ export default () => {
                         </Avatar>
                     </ListItemAvatar>
                     <ListItemText
-                        primary={<Link target="_blank" rel="noopener noreferrer" href="https://stackoverflow.com/users/9661304/pedro-silva">/pedro-silva</Link>}/>
+                        primary={<Link target="_blank" rel="noopener noreferrer"
+                                       href="https://stackoverflow.com/users/9661304/pedro-silva">/pedro-silva</Link>}/>
                 </ListItem>
             </List>
         </div>
     );
-}
+};
+
+export default Contacts;

@@ -11,13 +11,13 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
-function ProfilePhoto() {
+const ProfilePhoto = () => {
     const classes = useStyles();
     return (
         <div>
             <img className={classes.img} src={photo} alt="Profile"/>
         </div>
     );
-}
+};
 
 export default ProfilePhoto;

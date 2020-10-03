@@ -23,9 +23,8 @@ const useStyles = makeStyles({
     },
 });
 
-export default function ProjectCard({imgPath, title, description, url}: {imgPath: string, title: string, description: string, url: string}) {
+const ProjectCard = ({imgPath, title, description, url}: {imgPath: string, title: string, description: string, url: string}) => {
     const classes = useStyles();
-
     return (
         <Card className={classes.root}>
             <CardActionArea>
@@ -50,4 +49,6 @@ export default function ProjectCard({imgPath, title, description, url}: {imgPath
             </CardActions>
         </Card>
     );
-}
+};
+
+export default ProjectCard;

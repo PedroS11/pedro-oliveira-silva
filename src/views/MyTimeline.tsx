@@ -59,7 +59,7 @@ const events: TimelineEvent[] = [{
     title: 'Fullstack developer @ Mindera',
 }];
 
-function MyTimeline() {
+const MyTimeline = () => {
     const classes = useStyles();
     return (
         <div>
@@ -69,7 +69,7 @@ function MyTimeline() {
             <Timeline align="alternate">
                 {
                     events.map(e => (
-                        <TimelineItem>
+                        <TimelineItem key={e.title}>
                             <TimelineOppositeContent>
                                 <Typography variant="subtitle1" display={"inline"} color="textSecondary" gutterBottom>
                                     {e.periodOfTime}
@@ -93,7 +93,6 @@ function MyTimeline() {
             </Timeline>
         </div>
     );
-}
-
+};
 
 export default MyTimeline;

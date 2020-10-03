@@ -4,7 +4,7 @@ import {
 } from '@material-ui/core';
 import React from "react";
 
-export default () => {
+const Footer = () => {
     return (
         <Typography variant="subtitle1" align="center">
             {'Copyright © '}
@@ -12,4 +12,6 @@ export default () => {
             {' '}{new Date().getFullYear()}
         </Typography>
     );
-}
+};
+
+export default Footer;
