@@ -13,6 +13,9 @@ const useStyles = makeStyles(() => ({
         backgroundImage: `url(${waveLogo})`,
         backgroundSize: 'cover'
     },
+    sections: {
+        marginTop: '15px'
+    },
     footer: {
         borderTop: '1px solid #CECECE',
         paddingBottom: '5px'
@@ -29,19 +32,20 @@ function App() {
             </Grid>
 
             {/* Timeline */}
-            <Grid container direction="row" justify="center">
+            <Grid container direction="row" justify="center" className={classes.sections}>
                 <Grid item xs={8}>
                     <MyTimeline/>
                 </Grid>
             </Grid>
 
             {/* Projects */}
-            <Grid container direction="row" justify="center" alignItems="center" className={classes.waveBackground}>
+            <Grid container direction="row" justify="center" alignItems="center"
+                  className={`${classes.waveBackground} ${classes.sections}`}>
                 <Projects/>
             </Grid>
 
             {/* Contacts */}
-            <Grid container direction="row" justify="center" alignItems="center">
+            <Grid container direction="row" justify="center" alignItems="center" className={classes.sections}>
                 <Contacts/>
             </Grid>
 
