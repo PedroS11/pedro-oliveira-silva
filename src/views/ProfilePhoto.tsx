@@ -10,7 +10,6 @@ const useStyles = makeStyles(() => ({
         width: '100%',
         height: '450px',
         backgroundSize: 'cover',
-        backgroundPosition: '-0px -50px',
         color: 'white'
     },
     photoText: {
@@ -27,8 +26,8 @@ const ProfilePhoto = () => {
         <div className={classes.root}>
             <Typography variant="h3" align="center" gutterBottom className={classes.photoText}>
                 Pedro Oliveira da Silva
-                <Typography variant="h6" align="center" gutterBottom>
-                    Master in Computer Science @ FEUP
+                <Typography align="center" gutterBottom>
+                    Master in Informatics and Computing Engineering @ FEUP
                 </Typography>
             </Typography>
         </div>

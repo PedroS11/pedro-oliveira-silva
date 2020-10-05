@@ -3,7 +3,7 @@ import Footer from "./views/Footer";
 import ProfilePhoto from "./views/ProfilePhoto";
 import {Grid} from "@material-ui/core";
 import Contacts from "./views/Contacts";
-import MyTimeline from "./views/MyTimeline";
+import Experience from "./views/Experience";
 import Projects from "./views/Projects";
 import {makeStyles} from "@material-ui/core/styles";
 import waveLogo from "./assets/images/wave.png";
@@ -34,7 +34,7 @@ function App() {
             {/* Timeline */}
             <Grid container direction="row" justify="center" className={classes.sections}>
                 <Grid item xs={8}>
-                    <MyTimeline/>
+                    <Experience/>
                 </Grid>
             </Grid>
 

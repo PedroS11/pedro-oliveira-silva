@@ -34,7 +34,7 @@ interface TimelineEvent {
 const events: TimelineEvent[] = [{
     periodOfTime: 'Sept 2013',
     logo: upLogo,
-    title: 'Begin of the Master in Computer Science',
+    title: 'Begin of the Master in Informatics and Computing Engineering',
 }, {
     periodOfTime: 'Feb 2018 - Jun 2018',
     logo: glinttLogo,
@@ -43,7 +43,7 @@ const events: TimelineEvent[] = [{
 }, {
     periodOfTime: 'Jul 2018',
     logo: upLogo,
-    title: 'Master in Computer Science - FEUP',
+    title: 'Master in Informatics and Computing Engineering - FEUP',
 }, {
     periodOfTime: 'Jul 2018 - Jan 2020',
     logo: glinttLogo,
@@ -56,10 +56,10 @@ const events: TimelineEvent[] = [{
 }, {
     periodOfTime: 'Feb 2020 - Present',
     logo: minderaLogo,
-    title: 'Fullstack developer @ Mindera',
+    title: 'Backend developer @ Mindera',
 }];
 
-const MyTimeline = () => {
+const Experience = () => {
     const classes = useStyles();
     return (
         <div>
@@ -95,4 +95,4 @@ const MyTimeline = () => {
     );
 };
 
-export default MyTimeline;
+export default Experience;

@@ -10,13 +10,10 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 400,
+        margin: '10px'
     },
     title: {
         fontSize: 14,
-    },
-    pos: {
-        marginBottom: 12,
     },
     media: {
         height: 170,

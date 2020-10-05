@@ -37,9 +37,9 @@ const Projects = () => {
             <Typography variant="h3" align="center" gutterBottom>
                 Projects
             </Typography>
-            <Grid container spacing={2}>
+            <Grid container>
                 {projectList.map(e => (
-                    <Grid item xs={4} key={e.title}>
+                    <Grid item xs={12} sm={4} key={e.title}>
                         <ProjectCard {...e}/>
                     </Grid>
                 ))}
