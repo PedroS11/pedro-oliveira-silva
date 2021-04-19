@@ -11,10 +11,10 @@ const projectList = [
         url: 'https://github.com/PedroS11/twitch-live-extension'
     },
     {
-        imgPath: require('../assets/images/aws.png'),
-        title: 'aws-cloudformation-templates\n',
-        description: 'A set of the most common patterns and templates used with AWS',
-        url: 'https://github.com/PedroS11/aws-cloudformation-templates'
+        imgPath: require('../assets/images/valorant.svg'),
+        title: 'riot-valorant-api',
+        description: 'A NodeJS wrapper for the Valorant API',
+        url: 'https://github.com/PedroS11/riot-valorant-api'
     },
     {
         imgPath: require('../assets/images/typescript.png'),
